@@ -2,7 +2,7 @@
 
 ## Learning Algorithms
 
-For this project I trained 6 DQN agents, all based on the coding exercise for the "Deep Q-Networks" lesson of Udacity's *Deep Reinforcement Learning* course: 
+For this project I trained 6 DQN agents, all based on the code provided for the exercise in the "Deep Q-Networks" lesson of Udacity's *Deep Reinforcement Learning* course: 
 1) A basic DQN agent with no improvements beyond those from the initial coding exercise   
 2) A double DQN agent
 3) A dueling DQN agent
@@ -12,3 +12,4 @@ For this project I trained 6 DQN agents, all based on the coding exercise for th
 
 ### Basic DQN Agent
 
+![averaged scores](images/score_comparison.png)

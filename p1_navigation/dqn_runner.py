@@ -62,17 +62,12 @@ def dqn(env, agent, n_episodes=2000, max_t=1000, eps_start=1.0, eps_end=0.01, ep
     return scores
 
 def plot_scores(scores):
-    fig = plt.figure()
-    ax = fig.add_subplot(111)
-    plt.plot(np.arange(len(scores)), scores)
-    plt.ylabel('Score')
-    plt.xlabel('Episode #')
-    plt.show()
     n=100
     running_average = np.correlate(scores, np.ones(n)/n, mode='valid')
     fig = plt.figure()
     ax = fig.add_subplot(111)
-    plt.plot(np.arange(len(running_average)), running_average)
-    plt.ylabel(f'Average Score over {n} episodes')
+    plt.plot(np.arange(len(scores)), scores, label='Score')
+    plt.plot(np.arange(len(running_average)) + n - 1 , running_average, label=f'Average Score over prior {n} episodes')
     plt.xlabel('Episode #')
+    ax.legend()
     plt.show()
